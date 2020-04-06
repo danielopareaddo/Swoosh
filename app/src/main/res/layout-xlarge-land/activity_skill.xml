@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/beginnerballerbg"
+            android:id="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/background_image"/>
+
+    <ImageView
+            android:src="@drawable/swooshlogo"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView2"
+            android:scaleType="fitCenter" android:contentDescription="@string/swoosh_logo"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"/>
+
+    <TextView
+            android:text="@string/i_am_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" android:textSize="36sp"
+            android:textColor="@android:color/white" app:layout_constraintHorizontal_bias="0.487"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp" app:layout_constraintTop_toBottomOf="@+id/textView5">
+        <ToggleButton
+                android:text="@string/beginner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/beginnerSkillBtn" android:layout_weight="1"
+                android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"
+                android:textSize="36sp" android:textOff="@string/beginner" android:textOn="@string/beginner"
+                android:layout_marginEnd="32dp" android:onClick="onBeginnerClicked"/>
+        <ToggleButton
+                android:text="@string/togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/ballerSkillBtn" android:layout_weight="1"
+                android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"
+                android:textSize="36sp" android:textOff="@string/baller" android:textOn="@string/baller"
+                android:layout_marginStart="32dp" android:onClick="onBallerClicked"/>
+    </LinearLayout>
+
+    <Button
+            android:text="@string/finish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/skillFinishBtn" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/white" android:textSize="36sp"
+            android:background="@drawable/swoosh_button" android:onClick="onSkillFinishedClicked"
+            android:layout_marginBottom="50dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
